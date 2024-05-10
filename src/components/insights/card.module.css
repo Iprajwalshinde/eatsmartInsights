@@ -1,0 +1,82 @@
+.container {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.imageContainer {
+  flex: 1;
+  height: 350px;
+  position: relative;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.textContainer {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Reduce the gap between text elements */
+  position: relative; /* Position relative for pseudo-elements */
+  padding: 20px; /* Add padding for space inside the container */
+  border-radius: 8px; /* Add border radius for rounded corners */
+}
+
+.textContainer::before,
+.textContainer::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  height: 10px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #ffffff,
+    #ffffff 5px,
+    #f9f9f9 5px,
+    #f9f9f9 10px
+  ); /* Create zigzag border pattern */
+  border-radius: 8px; /* Match border radius of the container */
+}
+
+.date {
+  color: #555; /* Darken the color of the date */
+  font-size: 14px; /* Adjust the font size of the date */
+}
+
+.category {
+  color: rgb(115, 188, 47);
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.title {
+  font-size: 20px; /* Adjust font size */
+  font-weight: 700; /* Set font weight to bold */
+  color: #333; /* Set color to a dark shade */
+  text-transform: uppercase; /* Convert text to uppercase */
+  letter-spacing: 1px; /* Add spacing between letters */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add text shadow for depth */
+}
+
+.desc {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--softTextColor);
+}
+
+.link {
+  border-bottom: 1px solid crimson;
+  width: max-content;
+  padding: 2px 0px;
+}
+
+@media screen and (max-width: 1280px) {
+  .imageContainer {
+    display: none;
+  }
+}

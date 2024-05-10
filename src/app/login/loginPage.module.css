@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Container */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+/* Wrapper */
+.wrapper {
+  background-color: var(--softBg);
+  padding: 130px 180px; /* slightly smaller padding */
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  border-radius: 10px;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1); /* Improved 3D effect */
+}
+
+/* Social Button */
+.socialButton {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  color: #1a1a1a; /* Premium font color */
+  font-weight: 700; /* Increase font weight for clarity */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto', sans-serif; /* Apply Roboto font */
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8); /* Add additional text-shadow */
+  text-rendering: optimizeLegibility; /* Improved text sharpness */
+  -webkit-font-smoothing: antialiased; /* Improved font smoothing */
+  -moz-osx-font-smoothing: grayscale; /* Improved font smoothing */
+  background-color: #007bff; /* Blue button color */
+  animation: pulseAnimation 1.5s ease-in-out infinite alternate; /* Apply animation */
+}
+
+.googleLogo {
+  width: 24px; /* Adjust width of the Google logo */
+  margin-right: 10px; /* Add spacing between logo and text */
+}
+
+/* Colors for social buttons */
+.socialButton:first-child {
+  background-color: #007bff; /* Updated blue color */
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 90px 140px; /* adjust padding */
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .wrapper {
+    padding: 40px; /* adjust padding */
+  }
+
+  .socialButton {
+    font-weight: 400;
+    font-size: 14px;
+  }
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes pulseAnimation {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

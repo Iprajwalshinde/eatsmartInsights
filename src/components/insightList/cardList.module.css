@@ -1,0 +1,46 @@
+.container {
+  flex: 5;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  height: auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), 0 0 40px rgba(0, 0, 0, 0.1), 0 0 60px rgba(0, 0, 0, 0.1), 0 0 80px rgba(0, 0, 0, 0.1), 0 0 100px rgba(0, 0, 0, 0.1), inset 0 0 20px rgba(0, 0, 0, 0.1);
+  outline: 1px solid #ddd;
+}
+
+.title {
+  margin: 30px 0 60px; /* Adjust margin-bottom for gap after the title animation */
+  position: relative;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 29%;
+  height: 2px;
+  background-color: #ff0000;
+  animation: blinkAnimation 1s ease-in-out infinite alternate;
+}
+
+@keyframes blinkAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.posts > :not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
